@@ -1,0 +1,54 @@
+body {
+  background: #202020;
+  color: #dedede;
+}
+a:link,
+a:visited {
+  color: #dedede;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar ul li a {
+  color: #dedede;
+  font-size: 1.5rem;
+}
+.navbar ul li a:hover {
+  color: #378bbb;
+  height: 60px;
+  cursor: pointer;
+}
+.navbar {
+  background: #404040;
+  padding: 10px 5px;
+}
+.container {
+    max-width: 1100px;
+    padding: 20px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    border: 2px solid #dedede;
+    border-radius: 10px;
+    color: #dedede;
+    padding: 10px;
+    margin: 30px 10px;
+}
+.card:hover{
+    border: 2px solid #dedede;
+    border-radius: 10px;
+    background-color: #404040;
+    transform: scale(1.10);
+    transition: all ease-in;
+}
+.input{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

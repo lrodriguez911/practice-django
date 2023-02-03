@@ -1,22 +1,44 @@
-<nav>
-    <ul>
-        <li>
-            <a href="/" rel="noopener noreferrer">Home</a>
-        </li>
-        <li>
-            <a href="/projects" rel="noopener noreferrer">Projects</a>
-        </li>
-        <li>
-            <a href="/tasks" rel="noopener noreferrer">Tasks</a>
-        </li>
-        <li>
-            <a href="/about" rel="noopener noreferrer">About</a>
-        </li>
-        <li>
-            <a href="/create_task" rel="noopener noreferrer">Create Task</a>
-        </li>
-    </ul>
-</nav>
-
-{% block content %}
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="practing django">
+    <meta name="keywords" content="django, python, jinja">
+    <meta name="author" content="Lucas Rodriguez">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <title>Django project</title>
+</head>
+<body>
+    <nav class="navbar container">
+        <ul>
+            <li>
+                <a href="{% url 'index' %}" rel="noopener noreferrer">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'projects' %}" rel="noopener noreferrer">Projects</a>
+            </li>
+            <li>
+                <a href="{% url 'tasks' %}" rel="noopener noreferrer">Tasks</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}" rel="noopener noreferrer">About</a>
+            </li>
+            <li>
+                <a href="{% url 'create_task' %}"" rel="noopener noreferrer">Create Task</a>
+            </li>
+            <li>
+                <a href="{% url 'create_projects' %}" rel="noopener noreferrer">Create Project</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+   
+</body>
+</html>
